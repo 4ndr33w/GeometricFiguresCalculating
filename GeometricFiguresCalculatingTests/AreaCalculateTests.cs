@@ -26,7 +26,7 @@ namespace GeometricFiguresCalculating.Tests
         }
 
         [TestMethod()]
-        public void TriangleAreaTest_sides_a10b20c25_94dot992returned()
+        public void TriangleAreaTest_sides_a10b20c25_94dot99177returned()
         {
             double sideA = 10;
             double sideB = 20;
@@ -53,6 +53,22 @@ namespace GeometricFiguresCalculating.Tests
             double sideC = 5;
 
             bool expected = true;
+
+            AreaCalculate triangleTest = new AreaCalculate();
+
+            bool actual = triangleTest.IsTriangleRectangular(sideA, sideB, sideC);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        public void IsTriangleRectangularTest_sides_a9b4c5_falseReturned()
+        {
+            double sideA = 9;
+            double sideB = 4;
+            double sideC = 5;
+
+            bool expected = false;
 
             AreaCalculate triangleTest = new AreaCalculate();
 
