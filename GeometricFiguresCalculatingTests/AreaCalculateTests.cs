@@ -11,6 +11,15 @@ namespace GeometricFiguresCalculating.Tests
     [TestClass()]
     public class AreaCalculateTests
     {
+        AreaCalculate testingSubject;
+
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            testingSubject = new AreaCalculate();
+        }
+
+
         [TestMethod()]
         public void CircleAreaTest_Redius10_62dot8returned()
         {
@@ -18,9 +27,7 @@ namespace GeometricFiguresCalculating.Tests
 
             double expected = radius * 2 * Math.PI;
 
-            AreaCalculate circleTest = new AreaCalculate();
-
-            double actual = circleTest.CircleArea(radius);
+            double actual = testingSubject.CircleArea(radius);
 
             Assert.AreEqual(expected, actual);
         }
@@ -38,9 +45,7 @@ namespace GeometricFiguresCalculating.Tests
 
             double expected = Math.Sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
 
-            AreaCalculate triangleTest = new AreaCalculate();
-
-            double actual = triangleTest.TriangleArea(sideA, sideB, sideC);
+            double actual = testingSubject.TriangleArea(sideA, sideB, sideC);
 
             Assert.AreEqual(expected, actual);
         }
@@ -54,9 +59,7 @@ namespace GeometricFiguresCalculating.Tests
 
             bool expected = true;
 
-            AreaCalculate triangleTest = new AreaCalculate();
-
-            bool actual = triangleTest.IsTriangleRectangular(sideA, sideB, sideC);
+            bool actual = testingSubject.IsTriangleRectangular(sideA, sideB, sideC);
 
             Assert.AreEqual(expected, actual);
         }
@@ -70,9 +73,7 @@ namespace GeometricFiguresCalculating.Tests
 
             bool expected = false;
 
-            AreaCalculate triangleTest = new AreaCalculate();
-
-            bool actual = triangleTest.IsTriangleRectangular(sideA, sideB, sideC);
+            bool actual = testingSubject.IsTriangleRectangular(sideA, sideB, sideC);
 
             Assert.AreEqual(expected, actual);
         }
@@ -85,9 +86,7 @@ namespace GeometricFiguresCalculating.Tests
 
             double expected = sideA * sideB;
 
-            AreaCalculate rectangleTest = new AreaCalculate();
-
-            double actual = rectangleTest.RectangleArea(sideA, sideB);
+            double actual = testingSubject.RectangleArea(sideA, sideB);
 
             Assert.AreEqual(expected, actual);
         }
@@ -105,9 +104,7 @@ namespace GeometricFiguresCalculating.Tests
 
             double expected = Math.Sqrt((p - sideA) * (p - sideB) * (p - sideC) * (p - sideD));
 
-            AreaCalculate quadrilateralTest = new AreaCalculate();
-
-            double actual = quadrilateralTest.IrregularQuadrilateralArea(sideA, sideB, sideC, sideD);
+            double actual = testingSubject.IrregularQuadrilateralArea(sideA, sideB, sideC, sideD);
 
             Assert.AreEqual(expected, actual);
         }
