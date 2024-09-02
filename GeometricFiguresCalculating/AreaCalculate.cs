@@ -15,8 +15,8 @@
             double result = 0;
 
             double a = sideA > 0 ? sideA : (-1) * sideA;
-            double b = sideB > 0 ? sideB : (-1) * sideC;
-            double c = sideC > 0 ? sideB : (-1) * sideC;
+            double b = sideB > 0 ? sideB : (-1) * sideB;
+            double c = sideC > 0 ? sideC : (-1) * sideC;
 
             double perimeter = a + b + c;
             double semiPerimeter = perimeter / 2;
