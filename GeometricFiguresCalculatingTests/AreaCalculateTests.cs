@@ -60,11 +60,9 @@ namespace GeometricFiguresCalculating.Tests
             double sideB = 4;
             double sideC = 5;
 
-            bool expected = true;
-
             bool actual = testingSubject.IsTriangleRectangular(sideA, sideB, sideC);
 
-            Assert.AreEqual(expected, actual);
+            Assert.IsTrue(actual);
         }
 
         [TestMethod()]
@@ -74,11 +72,9 @@ namespace GeometricFiguresCalculating.Tests
             double sideB = 4;
             double sideC = 5;
 
-            bool expected = false;
-
             bool actual = testingSubject.IsTriangleRectangular(sideA, sideB, sideC);
 
-            Assert.AreEqual(expected, actual);
+            Assert.IsFalse(actual);
         }
 
         [TestMethod()]
