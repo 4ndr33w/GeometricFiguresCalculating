@@ -30,7 +30,7 @@ namespace GeometricFiguresCalculating.Tests
 
             double actual = testingSubject.CircleArea(radius);
 
-            Debug.WriteLine($"expected: {expected}, sctual: {actual}");
+            Debug.WriteLine($"expected: {expected}, actual: {actual}");
             Assert.AreEqual(expected, actual);
         }
 
@@ -49,7 +49,7 @@ namespace GeometricFiguresCalculating.Tests
 
             double actual = testingSubject.TriangleArea(sideA, sideB, sideC);
 
-            Debug.WriteLine($"expected: {expected}, sctual: {actual}");
+            Debug.WriteLine($"expected: {expected}, actual: {actual}");
             Assert.AreEqual(expected, actual);
         }
 
@@ -87,7 +87,7 @@ namespace GeometricFiguresCalculating.Tests
 
             double actual = testingSubject.RectangleArea(sideA, sideB);
 
-            Debug.WriteLine($"expected: {expected}, sctual: {actual}");
+            Debug.WriteLine($"expected: {expected}, actual: {actual}");
             Assert.AreEqual(expected, actual);
         }
 
@@ -106,7 +106,7 @@ namespace GeometricFiguresCalculating.Tests
 
             double actual = testingSubject.IrregularQuadrilateralArea(sideA, sideB, sideC, sideD);
 
-            Debug.WriteLine($"expected: {expected}, sctual: {actual}");
+            Debug.WriteLine($"expected: {expected}, actual: {actual}");
             Assert.AreEqual(expected, actual);
         }
     }
